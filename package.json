@@ -4,22 +4,14 @@
   "description": "Express middleware for firebase authentication",
   "main": "lib/index.js",
   "author": "Kevin O'Neill <kevin@oneill.id.au>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weegigs/firebase-express-authenticator.git"
+  },
   "license": "MIT",
-  "keywords": [
-    "firebase",
-    "express",
-    "auth",
-    "authentication",
-    "middleware"
-  ],
+  "keywords": ["firebase", "express", "auth", "authentication", "middleware"],
   "private": false,
-  "files": [
-    "lib",
-    "package.json",
-    "README.md",
-    "CHANGELOG.md",
-    "LICENCE"
-  ],
+  "files": ["lib", "package.json", "README.md", "CHANGELOG.md", "LICENCE"],
   "scripts": {
     "build": "yarn run clean && yarn run lint && yarn run compile",
     "clean": "npx rimraf lib",
@@ -67,21 +59,14 @@
     "typescript": "2.8.3"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json"
-    ],
+    "moduleFileExtensions": ["ts", "js", "json"],
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts)$",
     "transform": {
       ".(ts|tsx)": "node_modules/ts-jest/preprocessor.js"
     }
   },
   "lint-staged": {
-    "package.json": [
-      "prettier-package-json --write",
-      "git add package.json"
-    ]
+    "package.json": ["prettier-package-json --write", "git add package.json"]
   },
   "nodemonConfig": {
     "delay": "2000"
@@ -100,10 +85,6 @@
       "@semantic-release/npm",
       "@semantic-release/git"
     ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ]
+    "prepare": ["@semantic-release/changelog", "@semantic-release/npm", "@semantic-release/git"]
   }
 }
