@@ -1,0 +1,86 @@
+{
+  "name": "@weegigs/firebase-express-authenticator",
+  "version": "0.0.0",
+  "description": "Express middleware for firebase authentication",
+  "main": "lib/index.js",
+  "author": "Kevin O'Neill <kevin@oneill.id.au>",
+  "license": "MIT",
+  "keywords": ["firebase", "express", "auth", "authentication", "middleware"],
+  "private": false,
+  "files": ["lib", "package.json", "README.md", "CHANGELOG.md", "LICENCE"],
+  "scripts": {
+    "build": "yarn run clean && yarn run lint && yarn run compile",
+    "clean": "npx rimraf lib",
+    "precommit": "lint-staged",
+    "compile": "yarn run compile:tsc",
+    "compile:tsc": "npx tsc -p .",
+    "lint": "npx tslint -c tslint.json --project . \"src/**/*.ts\"",
+    "test": "yarn run test:unit",
+    "test:unit": "npx jest \"tests/*\" --env=node --coverage",
+    "test:watch": "npx jest \"tests/*\" --env=node --coverage --watch",
+    "watch": "npx concurrently -k --names='tsc' 'yarn run watch:tsc'",
+    "watch:tsc": "npx tsc -p . --watch",
+    "release": "npx semantic-release"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "express": "^4.16.3",
+    "firebase-admin": "^5.12.1"
+  },
+  "devDependencies": {
+    "@firebase/app-types": "0.3.2",
+    "@semantic-release/changelog": "2.0.2",
+    "@semantic-release/git": "5.0.0",
+    "@semantic-release/npm": "3.3.0",
+    "@types/express": "4.11.1",
+    "@types/jest": "22.2.3",
+    "@types/node": "10.1.2",
+    "concurrently": "3.5.1",
+    "express": "4.16.3",
+    "firebase-admin": "5.12.1",
+    "husky": "0.14.3",
+    "jest": "23.0.0",
+    "jest-cli": "23.0.0",
+    "jest-environment-node-debug": "2.0.0",
+    "lint-staged": "7.1.2",
+    "nodemon": "1.17.5",
+    "prettier": "1.12.1",
+    "prettier-package-json": "1.6.0",
+    "rimraf": "2.6.2",
+    "semantic-release": "15.5.0",
+    "ts-jest": "22.4.6",
+    "tslint": "5.10.0",
+    "tslint-config-prettier": "1.13.0",
+    "tslint-config-standard": "7.0.0",
+    "typescript": "2.8.3"
+  },
+  "jest": {
+    "moduleFileExtensions": ["ts", "js", "json"],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts)$",
+    "transform": {
+      ".(ts|tsx)": "node_modules/ts-jest/preprocessor.js"
+    }
+  },
+  "lint-staged": {
+    "package.json": ["prettier-package-json --write", "git add package.json"]
+  },
+  "nodemonConfig": {
+    "delay": "2000"
+  },
+  "types": "lib/index.d.ts",
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "es5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "prepare": ["@semantic-release/changelog", "@semantic-release/npm", "@semantic-release/git"]
+  }
+}

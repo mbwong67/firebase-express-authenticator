@@ -1,0 +1,12 @@
+.DS_Store
+
+coverage
+node_modules
+lib
+*.log
+.vscode
+.idea
+
+# Generated
+.cache
+nohup.out
