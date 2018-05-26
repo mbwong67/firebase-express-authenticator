@@ -21,7 +21,7 @@ function extractToken(authorization: string): string | undefined {
 }
 
 function authorizationFromHeader(request: Request) {
-  return headerAsString("Authorization", request);
+  return headerAsString("authorization", request);
 }
 
 function authorizationFromCookie(request: Request, cookieName?: string): string | undefined {
