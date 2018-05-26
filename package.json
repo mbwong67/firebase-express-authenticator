@@ -1,6 +1,6 @@
 {
   "name": "@weegigs/firebase-express-authenticator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Express middleware for firebase authentication",
   "main": "lib/index.js",
   "author": "Kevin O'Neill <kevin@oneill.id.au>",
