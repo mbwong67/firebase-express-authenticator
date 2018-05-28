@@ -6,7 +6,7 @@ import {
   AuthenticationErrorHandler,
   AuthenticationError,
 } from "./types";
-import { createHeaderOrCookieExtractor } from "./tokens";
+import { authorizationFromHeaderOrCookie } from "./tokens";
 
 const defaultErrorHandler: AuthenticationErrorHandler = (
   error: any,
@@ -24,7 +24,7 @@ const defaultErrorHandler: AuthenticationErrorHandler = (
 export const firebaseAuthenticator: (properties?: FirebaseAuthenticatorProperties) => Handler = (
   properties = {}
 ) => async (request: Request, response: Response, next: NextFunction) => {
-  const tokenExtractor = properties.tokenExtractor || createHeaderOrCookieExtractor();
+  const tokenExtractor = properties.tokenExtractor || authorizationFromHeaderOrCookie();
   const errorHandler = (error: any) =>
     (properties.errorHandler || defaultErrorHandler)(error, request, response, next);
 
