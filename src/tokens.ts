@@ -20,15 +20,18 @@ function extractToken(authorization: string): string | undefined {
   return undefined;
 }
 
-function authorizationFromHeader(request: Request) {
+export function authorizationFromHeader(request: Request) {
   return headerAsString("authorization", request);
 }
 
-function authorizationFromCookie(request: Request, cookieName?: string): string | undefined {
+export function authorizationFromCookie(
+  request: Request,
+  cookieName: string = "Authorization"
+): string | undefined {
   return cookieName && request.cookies && request.cookies[cookieName];
 }
 
-export const createHeaderOrCookieExtractor = (cookieName?: string): TokenExtractor => (
+export const authorizationFromHeaderOrCookie = (cookieName?: string): TokenExtractor => (
   request: Request
 ): string | undefined => {
   const authorization =
