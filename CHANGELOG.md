@@ -1,3 +1,11 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/weegigs/firebase-express-authenticator/compare/v1.0.2...v1.1.0) (2018-05-28)
+
+
+### Features
+
+* **tokens:** Get auth from header and cookie ([c414f81](https://github.com/weegigs/firebase-express-authenticator/commit/c414f81))
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/weegigs/firebase-express-authenticator/compare/v1.0.1...v1.0.2) (2018-05-26)
 
