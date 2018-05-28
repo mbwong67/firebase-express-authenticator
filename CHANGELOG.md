@@ -1,3 +1,11 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/weegigs/firebase-express-authenticator/compare/v1.1.0...v1.1.1) (2018-05-28)
+
+
+### Bug Fixes
+
+* **tokens:** Use authorizationFromHeaderOrCookie by default ([c3654b2](https://github.com/weegigs/firebase-express-authenticator/commit/c3654b2))
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/weegigs/firebase-express-authenticator/compare/v1.0.2...v1.1.0) (2018-05-28)
 
