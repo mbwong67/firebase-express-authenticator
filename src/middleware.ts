@@ -49,7 +49,7 @@ export const firebaseAuthenticator: (properties?: FirebaseAuthenticatorPropertie
         errorHandler(new AuthenticationError());
       }
     } catch (error) {
-      errorHandler(error);
+      errorHandler(new AuthenticationError(error.message));
     }
   } else {
     errorHandler(new AuthenticationError());
