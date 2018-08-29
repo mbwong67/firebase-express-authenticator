@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/weegigs/firebase-express-authenticator/compare/v1.1.2...v2.0.0) (2018-08-29)
+
+
+### Build System
+
+* Updated key dependencies ([9c36f89](https://github.com/weegigs/firebase-express-authenticator/commit/9c36f89))
+
+
+### BREAKING CHANGES
+
+* Now requires firebase-admin ^6.0.0
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/weegigs/firebase-express-authenticator/compare/v1.1.1...v1.1.2) (2018-05-29)
 
