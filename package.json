@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/weegigs/firebase-express-authenticator.git"
   },
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "lib/index.js",
   "files": [
     "lib"

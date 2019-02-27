@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/weegigs/firebase-express-authenticator/compare/v2.0.0...v3.0.0) (2019-02-27)
+
+
+### chore
+
+* update firebase and other project dependencies ([0d49104](https://github.com/weegigs/firebase-express-authenticator/commit/0d49104))
+
+
+### BREAKING CHANGES
+
+* Now requires firebase-admin ^7.0.0
+
 # [2.0.0](https://github.com/weegigs/firebase-express-authenticator/compare/v1.1.2...v2.0.0) (2018-08-29)
 
 
